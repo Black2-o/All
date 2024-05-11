@@ -1,0 +1,28 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find The Letter || Find The Letter</title>
+    <link rel="stylesheet" href="../../static/css/style.css">
+</head>
+<body>
+
+    <div class="dashboard-section">
+        <h1>Dashboard</h1>
+
+        <div class="all-words">
+            <ul>
+                <li><span>Word</span> <span>Bangla</span> <a href="#"><i class="fa-solid fa-x"></i></a></li>
+                {% for word in words %}
+                <li><span>{{word.name}}</span> <span>{{word.bangla_mean}}</span> <a href="{% url 'delete' word.id %}"><i class="fa-solid fa-x"></i></a></li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+
+
+    <script src="https://kit.fontawesome.com/2f363fc945.js" crossorigin="anonymous"></script>
+</body>
+
+
+</html>

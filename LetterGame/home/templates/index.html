@@ -1,0 +1,51 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find The Letter || Find The Letter</title>
+    <link rel="stylesheet" href="../../static/css/style.css">
+</head>
+<body>
+
+        <div class="point"> 
+            <h1>{{lives}}</h1>
+        </div>
+
+
+        <div class="mainBox flex-row">
+            <h1>Find The Word</h1>
+            <div class="display-word">
+                <ul class="flex-row">
+                    {% for x in display %}
+                    <li>{{x}}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="msg-box">
+                <h3 class="">{{msg}}</h3>
+            </div>
+            <div class="sent-box">
+                {% if game_is_on == True %}
+                <form action="{% url 'start' %}" method="post">
+                    {% csrf_token %}
+                    <input type="hidden" name="word" value="{{ word }}">
+                    <input type="hidden" name="display" value="{{ display }}">
+                    <input type="hidden" name="lives" value="{{ lives }}">
+                    <label class="input">
+                        <input class="input__field" type="text" placeholder="Write Letter" name="letter"/>
+                      </label>
+                    <input class="button" type="submit" value="Submit">
+
+                </form>
+                {% else %}
+                <h3><a href="{% url 'homee' %}">Restart</a></h1>
+                {% endif %}
+                
+            </div>
+        </div>
+
+        
+</body>
+
+
+</html>
