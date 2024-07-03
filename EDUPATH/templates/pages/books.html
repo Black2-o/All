@@ -1,0 +1,44 @@
+{% extends 'main.html' %}
+
+
+{% block content %}
+{% load static %}
+
+
+      <!-- Main Content -->
+      <div class="main-content">
+        <section class="section">
+            <div class="row">
+                <div class="col-12 col-sm-12 col-lg-12">
+                  <div class="card">
+                    <div class="card-header">
+                      <h4>All Books</h4>
+                    </div>
+                    <div class="card-body">
+                      <table class="table">
+                        
+                        <tbody>
+                          {% for item in books %}
+                          <tr style="border-bottom: 1px solid #d3d2d2 !important;
+                          font-size: 20px;
+                          font-weight: bold;">
+                             <td ><a href="{% url 'chapters' pk=re_id bpk=item.id%}">{{item.name}}</a></td>
+                           
+                            
+                          </tr>
+                          {% endfor %}
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                  
+                   
+                    
+                
+                </div>
+              </div>
+        </section>
+
+
+    </div>
+{% endblock %}

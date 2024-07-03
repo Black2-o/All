@@ -1,0 +1,67 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!-- index.html  21 Nov 2019 03:44:50 GMT -->
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
+  <title>Edupaht - Free Quality Education For Everyone</title>
+  <!-- General CSS Files -->
+  <link rel="stylesheet" href="{% static 'admin/css/app.min.css' %}">
+  <!-- Template CSS -->
+  <link rel="stylesheet" href="{% static 'admin/css/style.css' %}">
+  <link rel="stylesheet" href="{% static 'admin/css/components.css' %}">
+  <!-- Custom style CSS -->
+  <link rel="stylesheet" href="{% static 'admin/css/custom.css' %}">
+
+  <link rel='shortcut icon' type='image/x-icon' href="/static/admin/img/education.png" />
+</head>
+
+<body>
+    <div class="loader"></div>
+    <div id="app">
+      <div class="main-wrapper main-wrapper-1">
+        <div class="navbar-bg"></div>
+
+        {% include 'navbar.html' %}
+
+
+        {% block content %}
+        {% endblock %}
+    
+
+        {% include 'footer.html' %}
+
+      </div>
+    </div>
+
+  
+    <!-- General JS Scripts -->
+    <script src="{% static 'admin/js/app.min.js' %}"></script>
+    <!-- JS Libraies -->
+    <script src="{% static 'admin/bundles/apexcharts/apexcharts.min.js' %}"></script>
+    <!-- Page Specific JS File -->
+    <script src="{% static 'admin/js/page/index.js' %}"></script>
+    <!-- Template JS File -->
+    <script src="{% static 'admin/js/scripts.js' %}"></script>
+    <!-- Custom JS File -->
+    <script src="{% static 'admin/js/custom.js' %}"></script>
+    <script src="{% static 'admin/js/page/chat.js' %}"></script>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MCE7FT8GE8"></script>
+  <!-- <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-MCE7FT8GE8');
+  </script> -->
+
+  </body>
+  
+  
+  <!-- index.html  21 Nov 2019 03:47:04 GMT -->
+  </html>

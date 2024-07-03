@@ -1,0 +1,85 @@
+{% extends 'main.html' %}
+
+
+{% block content %}
+{% load static %}
+
+
+      <!-- Main Content -->
+      <div class="main-content">
+        <section class="section">
+          <div class="row">
+            <div class="col-12 col-md-6 col-lg-6">
+
+              <div class="card card-primary">
+                <div class="card-header">
+                  <h4>Take Lession</h4>
+                  <div class="card-header-action">
+                    <!-- <a href="#" class="btn btn-primary">
+                      Join Class Now
+                    </a> -->
+                  </div>
+                </div>
+                <div class="card-body">
+                  <p>Recorded video classes for 1-10</p>
+                  <a class="btn btn-primary" href="{% url 'class' %}">Get Started</a>
+                </div>
+              </div>
+
+              <div class="card card-primary">
+                <div class="card-header">
+                  <h4>Read Books</h4>
+                  <div class="card-header-action">
+                    <!-- <a href="#" class="btn btn-primary">
+                      Join Class Now
+                    </a> -->
+                  </div>
+                </div>
+                <div class="card-body">
+                  <p>Read any book any time for class 1-10</p>
+                  <a class="btn btn-primary" href="{% url 'readbooks' %}">Get Started</a>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-6">
+
+              <div class="card card-success">
+                <div class="card-header">
+                  <h4>AI Teacher</h4>
+                  <div class="card-header-action">
+                    <!-- <a href="#" class="btn btn-primary">
+                      Join Class Now
+                    </a> -->
+                  </div>
+                </div>
+                <div class="card-body">
+                  <p>Get 24/7 Help from you personal AI teacher</p>
+                  <a class="btn btn-primary" href="{% url 'chat' %}">Get Started</a>
+                </div>
+              </div>
+
+              <div class="card card-primary">
+                <div class="card-header">
+                  <h4>Study Discussion</h4>
+                  <div class="card-header-action">
+                    <!-- <a href="#" class="btn btn-primary">
+                      Join Class Now
+                    </a> -->
+                  </div>
+                </div>
+                <div class="card-body">
+                  <p>Shere your problem among student and teacher to get help </p>
+                  <a class="btn btn-primary" href="">Get Started</a>
+                </div>
+              </div>
+           
+            </div>
+
+          </div>
+        </section>
+
+
+      </div>
+{% endblock %}
